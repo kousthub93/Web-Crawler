@@ -1,0 +1,26 @@
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Explaination for task2:
+
+1. Initial step is to first fetch the 'href' from the anchor tag using the following code snippe 
+   link.herf().
+
+2. To fetch the text between the anchor tags using the below code snippet
+   link.text
+
+3. Write the regular expression considering the following cases:
+   - "^%s"     a string starting with 'rain'
+   - " %s$"    a string ending with 'rain' before which a space is present
+   - "_%s "    a string  starting with an underscore, followed by 'rain' and a space
+   - " %s"     a string starting with a space and followed by 'rain'
+   - "%s_"     a string having 'rain' followed by an underscore
+   - "_%s_"    a string having an underscore followed by 'rain' followed by an underscore
+   - " %s_"    a string with a space followed by 'rain' and followed by an underscore.
+
+4. But using the above things we consider 'rainfall' as a valid string to be present, but  
+   'rainXXXX' which does not have any relation to 'rain' might also be matched. So, to avoid this,
+   stemmer and decompounder must be used. So, I have not considered those complicated scenarios in this.
+
+5. Using re.compile() form an regExp component to be used to match the URLs fetched.
+
+6. Using the above methods Valid scenarios are taken into consideration and others are not written into the file. 
